@@ -9,7 +9,7 @@ using namespace std;
 
 
 
-void bubble_sort(int arr[], int n){
+void bubble_sort(vector<int> &arr, int n){
     for(int i = n-1; i>=1 ; i--){
         int didSwap = 0;
         for(int j = 0; j<=i-1 ; j++){
@@ -26,19 +26,32 @@ void bubble_sort(int arr[], int n){
 }
 
 
+void recursiveBubble(vector<int> &arr, int n)
 
+    {
+        if(n==0) return;
+        for(int i = 0 ; i < n-1 ; i++){
+            if(arr[i] >= arr[i+1]){
+                swap(arr[i], arr[i+1]);
+            }
+        } 
+        
+        recursiveBubble(arr, n-1);
+    }
 
 
 int main(){
     int n;
     cin >> n;
-    int arr[n];
+    vector<int> arr;
     for(int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
+    {   
+        int num;
+        cin >> num;
+        arr.push_back(num);
     }
 
-    bubble_sort(arr, n);
+    recursiveBubble(arr, n);
 
     for(int i = 0; i < n; i++)
     {
