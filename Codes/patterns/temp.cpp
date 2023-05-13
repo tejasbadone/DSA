@@ -43,7 +43,7 @@ void reverseArr(int arr[], int size){
 
 bool Uniq(vector<int> arr, int size){
 
-    int num = 0, count =0;
+    int count =0;
     vector<int> c;
 
 
