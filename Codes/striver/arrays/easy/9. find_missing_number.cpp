@@ -15,7 +15,7 @@ using namespace std;
 //                returning sum-s2. T.C. -> O(n) , S.C. -> O(1)
 
 //           2 -> using XOR, declare two ints xor1 and xor2 with 0. run a for loop from 0 to N (ie n-1, to save a extra for loop) and
-//                XOR all array elements and store it in xor2(this will generate some number) also XOR (i+1) to xor1 and store in xor1
+//                XOR all array elements and store it in xor2(this will generate some number) also XOR (i+1) to xor1 and store in xor1.
 //                after for loop, XOR xor1 with n(so that we could find the missing element). finally return xor1^xor2.
 
 //              T.C. -> O(n) , S.C. -> O(1)
