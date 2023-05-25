@@ -79,13 +79,11 @@ using namespace std;
 
     vector<int> twoSumYourSol(vector<int> &arr, int n, int target)
     {
-        vector<int> ans;
         int i=0;
         int j=1;
         while(i< n-1 && j < n){
-            if((arr[i] + arr[j]) == target){
-                ans.push_back(i);
-                ans.push_back(j);
+            if((nums[i] + nums[j]) == target){
+                return {i,j};
             }
             if(j==n-1){
                 i++;
@@ -93,7 +91,7 @@ using namespace std;
             }
             j++;
         }
-        return ans;
+        return {-1,-1};
     }
 
 
