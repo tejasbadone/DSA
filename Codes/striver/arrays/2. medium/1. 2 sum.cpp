@@ -69,7 +69,7 @@ using namespace std;
                 left++;
             }
             else{
-                right++;
+                right--;
             }
         
         }
